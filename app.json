@@ -1,9 +1,12 @@
 {
-  "buildpacks": [ { "url": "heroku/go" } ],
+  "buildpacks": [
+    { "url": "https://github.com/CGA1123/heroku-buildpack-bar" },
+    { "url": "https://github.com/CGA1123/heroku-buildpack-foo" },
+    { "url": "heroku/go" }
+  ],
   "stack": "heroku-20",
   "env": {
     "RANDOM_SECRET": { "generator": "secret" },
-    "FOO": { "value": "BAR" },
     "PING": { "value": "PONG" }
   }
 }
